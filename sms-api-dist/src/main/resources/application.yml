@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: sms-api-dist
+  profiles:
+    include:
+      - @profileActive@
+      - keycloak

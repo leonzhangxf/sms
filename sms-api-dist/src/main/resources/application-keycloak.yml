@@ -1,0 +1,14 @@
+# keycloak 授权配置
+keycloak:
+  # 对整个rest资源的基本配置，这里对所有资源，要求至少有 sms-user用户
+  security-constraints:
+    # sms-user 用户
+    - auth-roles:
+        - "*"
+      security-collections:
+        - name: protected
+          patterns:
+            - /*
+  policy-enforcer-config:
+    lazy-load-paths: false
+

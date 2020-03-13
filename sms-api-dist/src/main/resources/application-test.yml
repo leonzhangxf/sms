@@ -1,0 +1,67 @@
+# server
+server:
+  port: 8082
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3308/sms?characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 100
+      minimum-idle: 2
+      connection-timeout: 5000
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    timeout: 20000ms
+    database: 1
+    jedis:
+      pool:
+        max-active: 10
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+  cache:
+    type: redis
+    redis:
+      use-key-prefix: true
+      key-prefix: sms-test-
+      time-to-live: 28800s
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# swagger
+swagger:
+  enabled: true
+  title: 短信服务API接口文档
+  description: 短信服务API接口文档
+  contact:
+    name: 张晓峰
+    url: https://leonzhangxf.com
+    email: leonzhangxf@gmail.com
+
+# logger
+logging:
+  level:
+    root: info
+    org.springframework: info
+    com.boxuegu: info
+    org.keycloak: info
+  path: /tmp/sms-api-dist/test
+
+# keycloak 核心配置
+keycloak:
+  enabled: true
+  realm: employee
+  auth-server-url: http://auth-t.boxuegu.com/auth
+  ssl-required: none
+  resource: sms-api-dist-test
+  cors: true
+  autodetect-bearer-only: true
+  credentials:
+    secret: xxxxxxxx

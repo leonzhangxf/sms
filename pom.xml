@@ -43,7 +43,7 @@
         <swagger.version>2.9.2</swagger.version>
 
         <keycloak.version>4.4.0.Final</keycloak.version>
-        <httpclient.version>4.5.2</httpclient.version>
+        <httpclient.version>4.5.13</httpclient.version>
         <fastjson.version>1.2.51</fastjson.version>
 
         <aliyun.sdk.core.version>4.2.0</aliyun.sdk.core.version>

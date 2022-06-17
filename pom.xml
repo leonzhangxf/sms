@@ -44,7 +44,7 @@
 
         <keycloak.version>4.4.0.Final</keycloak.version>
         <httpclient.version>4.5.2</httpclient.version>
-        <fastjson.version>1.2.51</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
 
         <aliyun.sdk.core.version>4.2.0</aliyun.sdk.core.version>
         <aliyun.sdk.dysmsapi.version>1.1.0</aliyun.sdk.dysmsapi.version>
